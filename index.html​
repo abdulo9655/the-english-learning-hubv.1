@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The English Learning Hub</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #17315f;
+      background: linear-gradient(135deg, #edf5ff, #ffffff, #e7edff);
+      min-height: 100vh;
+    }
+    header {
+      padding: 22px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ffffffd9;
+      border-bottom: 1px solid #dce7fa;
+    }
+    .brand { font-size: 20px; font-weight: 800; }
+    .brand span { color: #4779ef; }
+    .hero {
+      max-width: 1000px;
+      margin: 65px auto;
+      padding: 24px;
+      text-align: center;
+    }
+    .tag {
+      display: inline-block;
+      background: #dce8ff;
+      padding: 9px 15px;
+      border-radius: 30px;
+      color: #315fc1;
+      font-size: 13px;
+    }
+    h1 { font-size: clamp(34px, 6vw, 60px); margin: 22px 0 12px; }
+    h1 span { color: #4779ef; }
+    .intro { color: #667797; line-height: 1.8; }
+    .panel {
+      max-width: 400px;
+      margin: 32px auto;
+      background: white;
+      padding: 28px;
+      border-radius: 22px;
+      box-shadow: 0 15px 45px #375d9814;
+      text-align: left;
+    }
+    label { display: block; margin: 15px 0 7px; font-size: 14px; }
+    input {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #d7e1f2;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+    button {
+      width: 100%;
+      border: 0;
+      background: #4779ef;
+      color: white;
+      padding: 14px;
+      border-radius: 10px;
+      margin-top: 20px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover { background: #315fc8; }
+    #message {
+      margin-top: 16px;
+      font-size: 14px;
+      line-height: 1.7;
+      overflow-wrap: anywhere;
+    }
+    footer { text-align: center; padding: 25px; color: #8190a9; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">THE ENGLISH <span>LEARNING HUB</span></div>
+  </header>
+
+  <main class="hero">
+    <div class="tag">✦ YOUR JOURNEY TO BETTER ENGLISH ✦</div>
+    <h1>Learn English.<br><span>Unlock Your Future.</span></h1>
+    <p class="intro">
+      พื้นที่การเรียนรู้ภาษาอังกฤษ คะแนน และระบบจองที่นั่ง<br>
+      สำหรับนักเรียนของ The English Learning Hub
+    </p>
+
+    <section class="panel">
+      <h2>Welcome back 👋</h2>
+      <p class="intro">เข้าสู่ระบบสำหรับนักเรียน</p>
+
+      <label for="username">ชื่อผู้ใช้</label>
+      <input id="username" autocomplete="username" placeholder="กรอกชื่อผู้ใช้">
+
+      <label for="password">รหัสผ่าน</label>
+      <input id="password" type="password"
+             autocomplete="current-password" placeholder="กรอกรหัสผ่าน">
+
+      <button id="loginButton" onclick="login()">เข้าสู่ระบบ →</button>
+      <div id="message" role="status"></div>
+    </section>
+  </main>
+
+  <footer>© The English Learning Hub · Small class, Big progress</footer>
+
+  <script>
+    // URL ของ Google Apps Script Web App
+    const API_URL =
+      'https://script.google.com/macros/s/AKfycbyPPieR9JPgToTFXNXnd5Cmg0fi15BXQkD8-EXvv9mTNC60LdgFEvlDVccRLARiTfLDSA/exec';
+
+    function login() {
+      document.getElementById('message').textContent =
+        'หน้าเข้าสู่ระบบพร้อมแล้ว แต่ต้องเพิ่ม API สำหรับตรวจสอบบัญชีใน Code.gs ก่อน จึงจะเข้าสู่ระบบได้จริง';
+    }
+  </script>
+</body>
+</html>
